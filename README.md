@@ -1,4 +1,4 @@
-# Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS
+# Guide-to-Install-Frappe-ERPNext15-in-Ubuntu-22.04-LTS
 A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application
 
 ### Pre-requisites 
@@ -42,6 +42,7 @@ I am using **erpnext** as frappe-user
 sudo adduser erpnext
 sudo usermod -aG sudo erpnext
 su - erpnext
+cd /home/erpnext/
 ```
 ### STEP 3 Install git
 Git is the most commonly used version control system. Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source.
@@ -51,7 +52,7 @@ sudo apt install git -y
 ### STEP 4 Install python3-dev and python3-venv
 Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
 ```
-sudo apt install python3-dev python3-venv -y
+sudo apt install python3-dev python3.10-dev python3-venv -y
 ```
 ### STEP 5 Install setuptools, pip and etc. (Python's Package Manager).
 Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
@@ -60,7 +61,7 @@ Pip is a package manager for Python. It's a tool that allows you to install and 
 
 Rest are the weasyprint dependencies.
 ```
-sudo apt install python3-setuptools python3-pip python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info -y
+sudo apt install python3-setuptools python3-pip python3-distutils python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info -y
 ```
 ### STEP 6 Install Redis server
 Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
@@ -77,17 +78,7 @@ If prompt for "Override local changes to /etc/pam.d/common-*?" on PAM Configurat
 ### STEP 8 install wkhtmltopdf
 Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).
 ```
-sudo apt install xvfb libfontconfig1 fontconfig libxrender1 xfonts-75dpi -y
-```
-#### for amd64
-```
-wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb && \
-sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
-```    
-#### for arm64
-```
-wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_arm64.deb && \
-sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_arm64.deb
+sudo apt install xvfb libfontconfig1 fontconfig libxrender1 xfonts-75dpi wkhtmltopdf -y
 ```
 <!--    sudo reboot
 

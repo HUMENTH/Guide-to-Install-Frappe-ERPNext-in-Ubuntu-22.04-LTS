@@ -63,7 +63,7 @@ sudo apt update
 ### STEP 5 Install python3-dev and python3-venv
 Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
 ```
-sudo apt install python3.11-dev python3.11-venv -y
+sudo apt install python3-dev python3-venv -y
 ```
 ### STEP 6 Install setuptools, pip and etc. (Python's Package Manager).
 Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.

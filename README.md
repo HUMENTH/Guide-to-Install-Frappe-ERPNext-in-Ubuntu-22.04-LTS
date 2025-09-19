@@ -126,7 +126,7 @@ If you are not prompted for the same You can initialize the MySQL server setup b
 sudo service mysql start       #run this command first, only if you are running Ubuntu in a Virtual Machine.    
 -->
 ```
-sudo mysql_secure_installation
+sudo mariadb-secure-installation
 ```
 #### Prompt
 ``` 

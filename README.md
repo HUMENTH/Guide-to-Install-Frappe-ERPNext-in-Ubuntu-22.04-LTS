@@ -228,7 +228,7 @@ Let us now create the frappe-bench environment. Here you have to decide the purp
     
 To choose a specific stable version (for Production) you can use the branch version. I will be using branch version 14 in this installation. You can look for the latest stable release of the frappe environment.
 ```
-bench init frappe-bench --verbose --frappe-branch version-15 --python python3.11
+bench init frappe-bench
 ```
 <!-- To deploy the latest (for development) frappe-bench environment make sure to run the command while you are in your home directory or your user and use the below command.
 

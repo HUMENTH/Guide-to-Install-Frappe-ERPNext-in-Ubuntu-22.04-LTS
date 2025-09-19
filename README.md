@@ -219,7 +219,7 @@ The bench is a Command-line tool to manage Frappe Deployments, this tool has var
 
 Now let us install the bench
 ```
-sudo -H python3.11 -m pip install frappe-bench
+sudo -H pip install frappe-bench --break-system-packages
 ```
 It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command "bench".
 
@@ -254,7 +254,7 @@ Now you need to get the app from the frappe repository, have two options, either
 -->
 Frappe and ERPNext version would be same for a proper installation. We will be installing ERPNext Version 14, for that, We will be using the below command.
 ```
-bench get-app erpnext --branch version-15
+bench get-app erpnext
 ```
 
 From any of the options, it will clone the next application into the app’s directory of the frappe-bench directory. You don’t need to do anything with the directories. Just ensure that erpnext is available in the directory.
@@ -316,6 +316,10 @@ This should return apache2: unrecognized service
 
 ### STEP 16 Production Deployment
 We will use an automatic bench set up for production by using the below command.
+
+```
+sudo -H pip3 install ansible --break-system-packages
+```
 
 #### Automatic Method:
 run **two** times

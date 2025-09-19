@@ -63,7 +63,7 @@ sudo apt update
 ### STEP 5 Install python3-dev and python3-venv
 Python-dev is the package that contains the header files for the Python C API, which is used by lxml because it includes Python C extensions for high performance.
 ```
-sudo apt install python3-dev python3-venv -y
+sudo apt install python-is-python3 python3-dev python3-venv -y
 ```
 ### STEP 6 Install setuptools, pip and etc. (Python's Package Manager).
 Setuptools is a collection of enhancements to the Python distutils, allowing developers to more easily build and distribute Python packages, especially those that have dependencies on other packages. Packages built and distributed using setuptools appear to the user as ordinary Python packages based on the distutils.
@@ -82,6 +82,7 @@ python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pi
 Redis can be used to process and analyze data in memory, this is prerequisite for ERPNext.
 ```
 sudo apt install redis-server -y
+sudo sed -i 's/^port .*/port 11000/' /etc/redis/redis.conf && sudo systemctl restart redis-server
 ```
 ### STEP 8 install wkhtmltopdf
 Wkhtmltopdf is an open source simple and much effective command-line shell utility that enables user to convert any given HTML (Web Page) to PDF document or an image (jpg, png, etc).
@@ -190,7 +191,7 @@ sudo service mysql restart
 sudo apt install curl && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash && \
 source ~/.profile && \
-nvm install 20
+nvm install 22
 ```
 <!--
 Sometimes, due to github raw content server not responding, you have to manually download "install.sh" and run in terminal.
@@ -219,7 +220,7 @@ The bench is a Command-line tool to manage Frappe Deployments, this tool has var
 
 Now let us install the bench
 ```
-sudo -H pip install frappe-bench --break-system-packages
+sudo -H pip3 install frappe-bench --break-system-packages
 ```
 It will install a bench and will give you a message that the bench is installed successfully, now you can use various bench commands. Starting with the command "bench".
 
@@ -292,28 +293,6 @@ bench start
 ```
 Now ERPNext is installed on your server and you are ready to configure it. But before configuring there are few more steps in case you want to use this for production.
 
-<!--
-### STEP ## ERPNext Setup for Production
-
-ERPNext only supports NGINX, so you can't use apache2 on this server. You have to remove Apache2 from your server.
-
-sudo apt-get remove --purge apache2 apache2-data apache2-utils apache2-bin apache2.2-common
-
-You can do the following two tests to confirm apache has been removed:
-
-Run
-
-which apache2
-
-This should return a blank line.
-
-Run
-
-sudo service apache2 start
-
-This should return apache2: unrecognized service
--->
-
 ### STEP 16 Production Deployment
 We will use an automatic bench set up for production by using the below command.
 
@@ -350,8 +329,8 @@ Now your site is ready, you must configure the SSL certificate, I have explained
 First, we will install spanny package as below
 ```
 bench config dns_multitenant on
-sudo pip install -U pyOpenSSL cryptography
-sudo pip install certbot
+sudo pip3 install -U pyOpenSSL cryptography
+sudo pip3 install certbot
 sudo bench setup lets-encrypt erp.YOURDOMAIN.COM
 ```
 

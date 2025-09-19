@@ -73,7 +73,7 @@ Pip is a package manager for Python. It's a tool that allows you to install and 
 Rest are the weasyprint dependencies.
 -->
 ```
-sudo apt install python3-setuptools python3-pip -y
+sudo apt install python3-setuptools python3-pip pkg-config -y
 ```
 <!--
 python3-wheel python3-cffi libcairo2 libpango1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info

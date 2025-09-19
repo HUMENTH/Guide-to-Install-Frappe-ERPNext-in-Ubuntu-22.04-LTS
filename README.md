@@ -1,14 +1,14 @@
-# Guide-to-Install-Frappe-ERPNext-in-Ubuntu-22.04-LTS
-A complete Guide to Install Frappe Bench in Ubuntu 22.04 LTS and install Frappe/ERPNext Application
+# Guide-to-Install-Frappe-ERPNext-in-Ubuntu-24.04-LTS
+A complete Guide to Install Frappe Bench in Ubuntu 24.04 LTS and install Frappe/ERPNext Application
 
 ### Pre-requisites 
 ```
-Python 3.10+
+Python 3.12+
 Node.js 20
 Redis                                         (caching and real time updates)
-MariaDB 10.6.x                                (to run database driven apps)
+MariaDB 10.11.x                                (to run database driven apps)
 yarn 1.12+                                    (js dependency manager)
-pip 22+                                       (py dependency manager)
+pip 24+                                       (py dependency manager)
 wkhtmltopdf (version 0.12.6 with patched qt)  (for pdf generation)
 cron                                          (bench's scheduled jobs: automated certificate renewal, scheduled backups)
 NGINX                                         (proxying multitenant sites in production)

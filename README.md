@@ -4,7 +4,7 @@ A complete Guide to Install Frappe Bench in Ubuntu 24.04 LTS and install Frappe/
 ### Pre-requisites 
 ```
 Python 3.12+
-Node.js 22
+Node.js 20
 Redis 6                                       (caching and real time updates)
 MariaDB 11.3.x                                (to run database driven apps)
 yarn 1.12+                                    (js dependency manager)
@@ -191,7 +191,7 @@ sudo service mysql restart
 sudo apt install curl && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash && \
 source ~/.profile && \
-nvm install 22
+nvm install 20
 ```
 <!--
 Sometimes, due to github raw content server not responding, you have to manually download "install.sh" and run in terminal.

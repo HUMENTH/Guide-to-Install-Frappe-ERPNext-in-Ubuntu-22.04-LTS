@@ -4,9 +4,9 @@ A complete Guide to Install Frappe Bench in Ubuntu 24.04 LTS and install Frappe/
 ### Pre-requisites 
 ```
 Python 3.12+
-Node.js 20
-Redis                                         (caching and real time updates)
-MariaDB 10.11.x                                (to run database driven apps)
+Node.js 22
+Redis 6                                       (caching and real time updates)
+MariaDB 11.3.x                                (to run database driven apps)
 yarn 1.12+                                    (js dependency manager)
 pip 24+                                       (py dependency manager)
 wkhtmltopdf (version 0.12.6 with patched qt)  (for pdf generation)

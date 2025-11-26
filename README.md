@@ -389,10 +389,10 @@ bench get-app raven --branch main https://github.com/The-Commit-Company/Raven
 bench --site erp.YOURDOMAIN.COM install-app raven
 
 bench get-app helpdesk --branch main
-bench --site erp.YOURDOMAIN.COM install-app frappedesk
+bench --site erp.YOURDOMAIN.COM install-app helpdesk
 
 bench get-app drive --branch main
-bench --site erp.YOURDOMAIN.COM install-app drive #(Not recommended on same site)
+bench --site erp.YOURDOMAIN.COM install-app drive
 
 bench get-app desk_navbar_extended https://github.com/gavindsouza/desk-navbar-extended
 bench --site erp.YOURDOMAIN.COM install-app desk_navbar_extended

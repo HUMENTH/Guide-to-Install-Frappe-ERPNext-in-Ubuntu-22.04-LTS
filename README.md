@@ -153,25 +153,8 @@ After installation, you can initialize a bench:
 ```bash
 bench init frappe-bench --frappe-branch version-16
 cd frappe-bench
-bench new-site mysite.local
+bench new-site mysite.localhost
 bench get-app erpnext
-bench --site mysite.local install-app erpnext
+bench --site mysite.localhost install-app erpnext
 bench start
 ```
-
----
-
-## 💡 Notes
-
-* Prefer **`uv` over pip** for modern Python management.
-* Node.js via **NVM** allows easy version switching.
-* Ensure **MariaDB version compatibility** with your Frappe version.
-* wkhtmltopdf version `0.12.6.1` is recommended for PDF generation.
-
----
-
-If you want, I can extend this into:
-
-* 🔧 Production setup (Supervisor + Nginx)
-* 🐳 Docker version
-* ⚡ ERPNext auto-install script
